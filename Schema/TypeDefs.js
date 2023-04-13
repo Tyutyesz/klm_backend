@@ -1,11 +1,6 @@
 const {gql} = require("apollo-server-express");
 
 const typeDefs = gql`
-type User {
-    name: String!
-    age: Int!
-    married: Boolean!
-}
 
 type ContactDetails {
   class: String!
@@ -127,7 +122,6 @@ type Booking {
 
 # Queries
 type Query {
-    getAllUsers: [User!]!
     getBooking(bookingCode: String!): Booking
 }
 
